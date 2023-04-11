@@ -1,50 +1,32 @@
-import '@/app/globals.css'  
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default async function Home() {
-
-  const ticker = await (
-    await fetch("https://api.github.com/users/3dunoabraham/repos")
-  ).json()
-
+export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        
-      <div>
-          <a className='pa-2 tx-lx opaci-chov--50'
-            href="/" target="_blank" rel="noopener noreferrer"
-          >
-            Home
-          </a>
-        </div>
-        
+        <p>
+          Get started by editing&nbsp;
+          <code className={styles.code}>src/app/page.tsx</code>
+        </p>
         <div>
-          
-        </div>
-        <details className='pos-re'>
-          <summary className='opaci-chov--50 pa-3'> Github:</summary>
-          <code  className='flex-col py-8 pos-abs z-800 bg-b-10  bord-r-5 h-max-300px  autoverflow-y block py-2' >
-            {ticker.map((aRepo:any)=>(
-              <a href={aRepo.html_url} target="_blank" rel="noopener noreferrer" key={ticker.id}
-                className='opaci-chov-75 opaci-25 pa-2 block  '
-              >
-                {aRepo.name}
-                <i className='tx-lg'>→</i>
-              </a>
-            ))}
-          </code>
-        </details>
-        <div>
-          <a className='pa-2'
-            href="https://github.com/3dunoabraham" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             By{' '}
-            <b>3dunoabraham</b>
+            <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              className={styles.vercelLogo}
+              width={100}
+              height={24}
+              priority
+            />
           </a>
         </div>
       </div>
@@ -62,7 +44,7 @@ export default async function Home() {
 
       <div className={styles.grid}>
         <a
-          href="https://tresd1.gitbook.io/webgame/"
+          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -71,32 +53,48 @@ export default async function Home() {
             Docs <span>-&gt;</span>
           </h2>
           <p className={inter.className}>
-            Find in-depth information about this tutorial.
+            Find in-depth information about Next.js features and API.
           </p>
         </a>
 
-        <div></div>
-        <div></div>
-
         <a
-          href="https://vercel.com/"
-          className={styles.card+" flex-col"}
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <a className='pa-2'
-            href="/" target="_blank" rel="noopener noreferrer"
-          >
-            Powered by{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h2 className={inter.className}>
+            Learn <span>-&gt;</span>
+          </h2>
+          <p className={inter.className}>
+            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          </p>
+        </a>
+
+        <a
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles.card}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={inter.className}>
+            Templates <span>-&gt;</span>
+          </h2>
+          <p className={inter.className}>Explore the Next.js 13 playground.</p>
+        </a>
+
+        <a
+          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className={styles.card}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={inter.className}>
+            Deploy <span>-&gt;</span>
+          </h2>
+          <p className={inter.className}>
+            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          </p>
         </a>
       </div>
     </main>

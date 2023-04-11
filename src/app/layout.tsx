@@ -1,6 +1,4 @@
-// import './globals.css'
-import "csscss"
-
+import './globals.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,10 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://unpkg.com/csscss@latest/index.css" />
-      </head>
-      <body className="ma-0 tx-sans">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
