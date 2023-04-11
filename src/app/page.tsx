@@ -19,14 +19,18 @@ export default async function Home() {
       <div className='flex-col'>
         {tickerCards}
       </div>
-      <a href="/dashboard" rel="noopener noreferrer" className='pos-abs top-0 right-0  pa-4'>
+      <a href="/dashboard" rel="noopener noreferrer"
+        className='pos-abs top-0 right-0  pa-4'
+      >
         Dashboard
       </a>
-      <a href="/" rel="noopener noreferrer" className='pos-abs bottom-0 right-0  px-4'>
+      <a href="/" rel="noopener noreferrer"
+        className='pos-abs bottom-0 right-0  px-4'
+      >
         <div className='flex gap-2 '>
           <div className='flex-col'>
-              <Image alt="asd"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/480px-Binance_Logo.svg.png" width={24} height={24}
+              <Image alt="asd" width={24} height={24}
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/480px-Binance_Logo.svg.png"
               />
           </div>
           <div className="tx-lx opaci-50">+</div>

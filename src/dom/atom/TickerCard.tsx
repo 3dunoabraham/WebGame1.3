@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { Ticker, TickerName, getTicker } from '@/../script/state/service/ticker';
+import { Ticker, TickerName } from '@/../script/state/service/ticker';
 import useTicker from '@/../script/util/hook/useTicker';
 
 const Component = ({
@@ -22,7 +21,7 @@ const Component = ({
         {ticker.symbol}: <code>{ticker.price}</code>
       </p>
     }
-    </>);
+  </>);
 };
 
 export default Component;
