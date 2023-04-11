@@ -84,8 +84,8 @@ export default async function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <a className='pa-2'
-            href="/" target="_blank" rel="noopener noreferrer"
+          <div className='pa-2'
+            
           >
             Powered by{' '}
             <Image
@@ -96,7 +96,7 @@ export default async function Home() {
               height={24}
               priority
             />
-          </a>
+          </div>
         </a>
       </div>
     </main>
