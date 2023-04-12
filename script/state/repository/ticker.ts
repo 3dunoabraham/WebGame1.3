@@ -1,6 +1,6 @@
-const tickerSymbolsArray = ['EURUSDT', 'USDCUSDT'] as const;
-type TickersSymbols = typeof tickerSymbolsArray;
-type TickerName = TickersSymbols[number];
+export const tickerSymbolsArray = ['EURUSDT', 'USDCUSDT'] as const;
+export type TickersSymbols = typeof tickerSymbolsArray;
+export type TickerName = TickersSymbols[number];
 
 export interface Ticker {
     symbol: string;
