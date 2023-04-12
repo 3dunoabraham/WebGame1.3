@@ -1,13 +1,11 @@
-import Image from 'next/image'
-import { TICKER_SYMBOLS, Ticker, getTicker } from '@/../script/state/service/ticker'
+import { TICKER_SYMBOLS, Ticker, getTicker } from '@/../script/state/repository/ticker'
 import TickerCard from '@/dom/atom/TickerCard'
-
 
 export default async function Home() {
 
   const tickers: Ticker[] = await Promise.all([
     getTicker(),
-    getTicker("ETHUSDT")
+    getTicker("EURUSDT")
   ]);
   
   const tickerCards = TICKER_SYMBOLS.map((tickerName:any, index:number) => (
@@ -15,30 +13,17 @@ export default async function Home() {
   )); 
 
   return (
-    <main>
-      <div className='flex-col'>
+    <main style={{minHeight:"100vh",textAlign:"center"}}>
+      <br />
+      <div>
         {tickerCards}
       </div>
-      <a href="/dashboard" rel="noopener noreferrer"
-        className='pos-abs top-0 right-0  pa-4'
-      >
-        Dashboard
-      </a>
-      <a href="/" rel="noopener noreferrer"
-        className='pos-abs bottom-0 right-0  px-4'
-      >
-        <div className='flex gap-2 '>
-          <div className='flex-col'>
-              <Image alt="asd" width={24} height={24}
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/480px-Binance_Logo.svg.png"
-              />
-          </div>
-          <div className="tx-lx opaci-50">+</div>
-          <div className="flex-col">
-            <Image src="/next.svg" alt="Next.js Logo" width={60} height={12} priority />
-          </div>
-        </div>
-      </a>
+      <br />
+      <h1>
+        <a href="/dashboard">
+          Dashboard
+        </a>
+      </h1>
     </main>
   )
 }
