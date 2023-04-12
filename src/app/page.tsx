@@ -5,7 +5,7 @@ export default async function Home() {
 
   const tickers: Ticker[] = await Promise.all([
     getTicker(),
-    getTicker("EURUSDT")
+    getTicker("USDCUSDT")
   ]);
   
   const tickerCards = TICKER_SYMBOLS.map((tickerName:any, index:number) => (
