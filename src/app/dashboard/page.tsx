@@ -15,17 +15,10 @@ export default async function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         
-      <div>
-          <a className='pa-2 tx-lx opaci-chov--50'
-            href="/" target="_blank" rel="noopener noreferrer"
-          >
-            Home
-          </a>
-        </div>
+        <div> <a className='pa-2 tx-lx opaci-chov--50' href="/"> Home </a> </div>
         
-        <div>
-          
-        </div>
+        <div></div>
+        
         <details className='pos-re'>
           <summary className='opaci-chov--50 pa-3'> Github:</summary>
           <code  className='flex-col py-8 pos-abs z-800 bg-b-10  bord-r-5 h-max-300px  autoverflow-y block py-2' >
